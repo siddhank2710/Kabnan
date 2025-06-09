@@ -1,0 +1,9 @@
+{
+  "name": "javascript-project",
+  "version": "1.0.0",
+  "description": "A basic JavaScript project",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Meeting Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>SP Meeting Kanban Board</h1>
+            <p>Stored Procedures: Data Flow & Frontend Display</p>
+        </header>
+
+        <div class="kanban-board">
+            <div class="column" data-column="agenda">
+                <div class="column-header column-header--agenda">
+                    <h2>📋 Agenda/To Cover Today</h2>
+                    <button class="btn btn--sm btn--outline add-item-btn" data-column="agenda">
+                        + Add Item
+                    </button>
+                </div>
+                <div class="column-content" id="agenda-column">
+                    <!-- Items will be added here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="column" data-column="resources">
+                <div class="column-header column-header--resources">
+                    <h2>📚 Resources</h2>
+                    <button class="btn btn--sm btn--outline add-item-btn" data-column="resources">
+                        + Add Item
+                    </button>
+                </div>
+                <div class="column-content" id="resources-column">
+                    <!-- Items will be added here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="column" data-column="completed">
+                <div class="column-header column-header--completed">
+                    <h2>✅ Completed</h2>
+                    <button class="btn btn--sm btn--outline add-item-btn" data-column="completed">
+                        + Add Item
+                    </button>
+                </div>
+                <div class="column-content" id="completed-column">
+                    <!-- Items will be added here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for adding items -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Add New Item</h3>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="add-item-form">
+                    <div class="form-group">
+                        <label for="item-text" class="form-label">Item Description</label>
+                        <textarea id="item-text" class="form-control" rows="3" placeholder="Enter item description..." required></textarea>
+                    </div>
+                    <div class="flex gap-8 justify-between">
+                        <button type="button" class="btn btn--secondary" id="cancel-btn">Cancel</button>
+                        <button type="submit" class="btn btn--primary">Add Item</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
