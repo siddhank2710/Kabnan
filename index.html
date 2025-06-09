@@ -9,8 +9,9 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1>SP Meeting Kanban Board</h1>
-            <p>Stored Procedures: Data Flow & Frontend Display</p>
+            <h1>Kanban Board</h1>
+            <p>Manage your tasks and items efficiently</p>
+            <div id="current-date" class="current-date"></div>
         </header>
 
         <div class="kanban-board">
@@ -26,18 +27,6 @@
                 </div>
             </div>
 
-            <div class="column" data-column="resources">
-                <div class="column-header column-header--resources">
-                    <h2>📚 Resources</h2>
-                    <button class="btn btn--sm btn--outline add-item-btn" data-column="resources">
-                        + Add Item
-                    </button>
-                </div>
-                <div class="column-content" id="resources-column">
-                    <!-- Items will be added here by JavaScript -->
-                </div>
-            </div>
-
             <div class="column" data-column="completed">
                 <div class="column-header column-header--completed">
                     <h2>✅ Completed</h2>
@@ -46,6 +35,18 @@
                     </button>
                 </div>
                 <div class="column-content" id="completed-column">
+                    <!-- Items will be added here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="column" data-column="resources">
+                <div class="column-header column-header--resources">
+                    <h2>📚 Resources</h2>
+                    <button class="btn btn--sm btn--outline add-item-btn" data-column="resources">
+                        + Add Item
+                    </button>
+                </div>
+                <div class="column-content" id="resources-column">
                     <!-- Items will be added here by JavaScript -->
                 </div>
             </div>
