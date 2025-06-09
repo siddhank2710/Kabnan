@@ -735,52 +735,52 @@ select.form-control {
 .kanban-item {
   background-color: var(--color-surface);
   border: 1px solid var(--color-card-border);
-  border-radius: var(--radius-base);
-  padding: var(--space-12);
-  box-shadow: var(--shadow-sm);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   cursor: move;
   user-select: none;
   position: relative;
-  transition: all var(--duration-fast) var(--ease-standard);
+  transition: all 0.15s ease-in-out;
 }
 
 .kanban-item:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  transform: translateY(-0.1rem);
 }
 
 .kanban-item.dragging {
   opacity: 0.5;
   transform: rotate(2deg);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
 }
 
 .kanban-item-content {
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-normal);
+  font-size: 1rem;
+  line-height: 1.5;
   color: var(--color-text);
   word-wrap: break-word;
-  margin-right: var(--space-20);
+  margin-right: 1.25rem;
 }
 
 .delete-btn {
   position: absolute;
-  top: var(--space-8);
-  right: var(--space-8);
+  top: 0.5rem;
+  right: 0.5rem;
   background: var(--color-error);
   color: white;
   border: none;
-  border-radius: var(--radius-full);
-  width: 20px;
-  height: 20px;
+  border-radius: 9999px;
+  width: 1.25rem;
+  height: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
+  font-size: 0.75rem;
+  font-weight: 700;
   opacity: 0;
-  transition: opacity var(--duration-fast) var(--ease-standard);
+  transition: opacity 0.15s ease-in-out;
 }
 
 .kanban-item:hover .delete-btn {
